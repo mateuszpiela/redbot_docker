@@ -1,0 +1,11 @@
+services:
+  redbot:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      BOT_TOKEN: "DISCORD_BOT_TOKEN_HERE!"
+      PREFIX: "!"
+    restart: unless-stopped
+    volumes:
+      - /<host_path>:/redbot/data
